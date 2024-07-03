@@ -1,0 +1,50 @@
+{
+  "name": "microfrontend-store",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "shared:start": "cd shared && npm install && npm run build && npm run start",
+    "shared:dev": "cd shared && npm install && npm run dev",
+    "shared:lint": "cd shared && npm install && npm run lint",
+    "shared:coverage": "cd shared && npm install && npm run coverage",
+    "shared:test": "cd shared && npm install && npm run test",
+    "shared:build": "cd shared && npm install && npm run build",
+
+    "footer:start": "cd footer && npm install && npm run build && npm run start",
+    "footer:dev": "cd footer && npm install && npm run dev",
+    "footer:lint": "cd footer && npm install && npm run lint",
+    "footer:coverage": "cd footer && npm install && npm run coverage",
+    "footer:test": "cd footer && npm install && npm run test",
+    "footer:build": "cd footer && npm install && npm run build",
+
+    "header:start": "cd header && npm install && npm run build && npm run start",
+    "header:dev": "cd header && npm install && npm run dev",
+    "header:lint": "cd header && npm install && npm run lint",
+    "header:coverage": "cd header && npm install && npm run coverage",
+    "header:test": "cd header && npm install && npm run test",
+    "header:build": "cd header && npm install && npm run build",
+
+    "products-display:start": "cd products-display && npm install && npm run build && npm run start",
+    "products-display:dev": "cd products-display && npm install && npm run dev",
+    "products-display:lint": "cd products-display && npm install && npm run lint",
+    "products-display:coverage": "cd products-display && npm install && npm run coverage",
+    "products-display:test": "cd products-display && npm install && npm run test",
+    "products-display:build": "cd products-display && npm install && npm run build",
+
+    "host:start": "cd host && npm install && npm run build && npm run start",
+    "host:dev": "cd host && npm install && npm run dev",
+    "host:lint": "cd host && npm install && npm run lint",
+    "host:coverage": "cd host && npm install && npm run coverage",
+    "host:test": "cd host && npm install && npm run test",
+    "host:build": "cd host && npm install && npm run build",
+
+    "start": "concurrently \"npm run host:start\" \"npm run shared:start\" \"npm run header:start\" \"npm run products-display:start\" \"npm run footer:start\"",
+    "coverage": "concurrently \"npm run shared:coverage\" \"npm run header:coverage\" \"npm run products-display:coverage\" \"npm run footer:coverage\"",
+    "test": "concurrently \"npm run shared:test\" \"npm run header:test\" \"npm run products-display:test\" \"npm run footer:test\"",
+    "build": "concurrently \"npm run host:build\" \"npm run shared:build\" \"npm run header:build\" \"npm run products-display:build\" \"npm run footer:build\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

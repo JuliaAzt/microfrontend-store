@@ -36,7 +36,7 @@ Para roda o projeto completo, é necessário a disponibilidade das seguintes por
 
 | Comandos | Descrição                                                    |
 | -------- | ------------------------------------------------------------ |
-| `5000`   | Componente host da applicação, reponsável pela loja completa |
+| `5000`   | Componente host da aplicação, responsável pela loja completa |
 | `5001`   | Componente header - responsavel pelo carrinho e pela navbar  |
 | `5002`   | Componente main - responsável pelo corpo da loja             |
 | `5003`   | Componente Footer do projeto                                 |
